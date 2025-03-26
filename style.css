@@ -17,6 +17,9 @@ body {
   font-family: Arial, sans-serif;
   overflow:hidden;
 }
+.content {
+      display: none;
+    }
 footer{
   position: absolute;
   font-size: 15px;
