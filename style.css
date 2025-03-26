@@ -1,0 +1,287 @@
+@font-face {
+  font-family: 'thebeard';
+  src:  url('The\ Beard\ -\ PERSONAL\ USE\ ONLY.otf');
+}
+body {
+  user-select: none; /* Disable text selection */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 50%, #f0f0f0 50%, #f0f0f0 75%, transparent 75%, transparent) 0 0 / 40px 40px;
+  font-family: Arial, sans-serif;
+  overflow:hidden;
+}
+footer{
+  position: absolute;
+  font-size: 15px;
+  font-family: 'thebeard';
+  bottom: 0%;
+  right: 0%;
+}
+h1{
+  background-color: #ffb45e;
+  border-radius: 50px 0px 50px 0px;
+}
+h1:hover{
+  box-shadow: 5px 5px 0px #000;
+}
+#big-board {
+  display: grid;
+  place-self: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.small-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0px;
+  margin: 20px;
+  margin-top: 40px;
+  font-size: 260px;
+  font-weight:bolder;
+  color: rgb(0, 0, 0);
+  width: 300px;
+  height: 300px;
+  background-color: #161616;
+  border: 0px solid #333;  
+  transition: ease 0.3s ease;
+}
+
+.small-board div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  border: 0px solid #000;
+  font-size: 24px;
+  
+  background-color: #ffb45e;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  /* box-shadow: 0px 0px 5px #080808; */
+}
+
+.small-board div:hover {
+  background-color: #ffd19d;
+}
+
+/* From Uiverse.io by zjssun */ 
+button {
+  position: relative;
+  padding: 25px 50px;
+  border-radius: 6px;
+  font-size: 30px;
+  border: none;
+  margin: 10px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #ffb45e;
+  box-shadow: 10px 10px 0px black;
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button:before,
+button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #e89c2a 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #e89c2a 20%, transparent 30%),
+    radial-gradient(circle, #e89c2a 20%, transparent 20%),
+    radial-gradient(circle, #e89c2a 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #e89c2a 15%, transparent 20%),
+    radial-gradient(circle, #e89c2a 20%, transparent 20%),
+    radial-gradient(circle, #e89c2a 20%, transparent 20%),
+    radial-gradient(circle, #e89c2a 20%, transparent 20%),
+    radial-gradient(circle, #e89c2a 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #e8bc2a 20%, transparent 20%),
+    radial-gradient(circle, #e8bc2a 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #e8bc2a 15%, transparent 20%),
+    radial-gradient(circle, #e8bc2a 20%, transparent 20%),
+    radial-gradient(circle, #e8bc2a 20%, transparent 20%),
+    radial-gradient(circle, #e8bc2a 20%, transparent 20%),
+    radial-gradient(circle, #e8bc2a 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 2px solid #333;
+  padding: 20px;
+  font-size: 24px;
+  z-index: 1000;
+}
+
+.popup.show {
+  display: block;
+  animation: fadeInOut 0.15s;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.highlight {
+  background-color: crimson; /* Start with the crimson color */
+}
+.highlight-flicker{
+  animation: flicker 0.15s infinite;
+}
+@keyframes flicker {
+  0% { background-color: crimson; }
+  50% { background-color: rgb(0, 0, 0); }
+  100% { background-color: crimson; }
+}
+
+@media (max-width: 768px) {
+  .small-board {
+      width: 200px;  /* Reduce the size of small boards */
+      height: 200px;
+      margin: 10px;
+      margin-top: 20px;
+      font-size: 60px;
+  }
+  h1:hover{
+    box-shadow: 0px 0px 0px ;
+  }
+  .small-board div {
+      width: 25px;  /* Reduce the size of cells */
+      height: 25px;
+      font-size: 14px;  /* Adjust the font size */
+  }
+
+  .small-board div:hover {
+      background-color: #ffb45e81; /* Adjust hover effect for smaller screens */
+  }
+
+  #big-board {
+      grid-gap: 5px;  /* Reduce spacing between small boards */
+  }
+
+  button {
+      padding: 8px 16px;  /* Adjust button size */
+      font-size: 16px;
+      margin: 5px;
+  }
+
+  #popup {
+      font-size: 20px;  /* Adjust popup font size */
+      padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .small-board {
+      width: 70px;  /* Further reduce the size of small boards */
+      height: 70px;
+      font-size: 60px;
+  }
+
+  .small-board div {
+      width: 20px;  /* Further reduce the size of cells */
+      height: 20px;
+      font-size: 12px;  /* Adjust the font size */
+  }
+
+  button {
+      padding: 6px 12px;  /* Further adjust button size */
+      font-size: 14px;
+      margin: 5px;
+  }
+
+  #popup {
+      font-size: 18px;  /* Further adjust popup font size */
+      padding: 10px;
+  }
+  button {
+    box-shadow: 3px 3px 0px black;
+  }
+  h1:hover{
+    box-shadow: 0px 0px 0px ;
+  }
+}
+#volume-control {
+  margin-top: 20px;
+  display: none;
+  align-items: center;
+}
+
+#volume-label {
+  margin-right: 10px;
+}
+.timer-display{
+  display: none;
+}

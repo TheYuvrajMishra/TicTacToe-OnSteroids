@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac On Steroids</title>
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="music-toggle">Turn Music Off</button>
+    <audio id="background-music" src="amend.mp3" loop autoplay></audio>
+    <div id="volume-control">
+        <label id="volume-label" for="volume-slider">Volume:</label>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+    </div>
+    <div id="timer-display">Time: 0m 0s</div>
+
+    <h1>Tic Tac Toe On Steroids</h1>
+    <div id="controls"> Mode :-
+        <button id="two-player-button">Two Player</button>
+        <button id="bot-button">Bot</button>
+        <button id="ai-learning-button">AI Learning (Alpha)</button>
+        <button id="self-playing-bots-button">Self-Playing Bots</button>
+    </div>
+    <div id="big-board" class="board">
+        <div class="board-row">
+            <div class="small-board"></div>
+            <div class="small-board"></div>
+            <div class="small-board"></div>
+        </div>
+        <div class="board-row">
+            <div class="small-board"></div>
+            <div class="small-board"></div>
+            <div class="small-board"></div>
+        </div>
+        <div class="board-row">
+            <div class="small-board"></div>
+            <div class="small-board"></div>
+            <div class="small-board"></div>
+        </div>
+    </div>
+    <button id="reset-button">
+        <span>Reset board</span>
+    </button>
+    <button id="reload-button">Reload</button>
+    <div id="popup" class="popup"></div>
+    <footer>Created by Yuvraj</footer>
+    <script src="script.js"></script>
+</body>
+</html>
