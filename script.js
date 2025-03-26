@@ -1,3 +1,15 @@
+function isMobile() {
+      return /Mobi|Android|iPhone/i.test(navigator.userAgent);
+    }
+
+    window.onload = function () {
+      if (!isMobile()) {
+        alert("This website is only accessible on mobile devices.");
+      } else {
+        document.querySelector(".content").style.display = "block";
+      }
+    };
+
 //Two Player ->
 
 
